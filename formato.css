@@ -1,0 +1,54 @@
+body{
+    background-color: darksalmon;
+    max-width: 100%;
+      height: auto;
+    
+  }
+  
+  
+  @media only screen and (max-width: 600px) {
+    /* Estilos para dispositivos com largura máxima de 600px */
+  }
+
+footer {
+    background-color: #302f2f;
+    color: #fff;
+    text-align: center;
+    padding: 0.1px;
+    right:0.5px ;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+img {
+    position: relative;
+    margin-left: 200px;
+    top:120px;
+    max-width: 20%;
+  
+}
+h1 {
+    position: relative;
+    font-weight: bold;
+    margin-left: 390px;
+    top: -20px;
+}
+p{
+    position: relative;
+    margin-left: 420px;
+    font-size: 19px;
+    font-weight: bold;
+    top: -10px;
+}
+#header {
+    height: 60px;
+}
+#main {
+    height: calc(100vh - 100px);
+    overflow-y: auto; /* Adicionando overflow-y automático */
+}
+.container {
+    min-height: 100%;
+}
+
