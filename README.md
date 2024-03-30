@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Site da Tia Jurema</title>
+    <link rel="stylesheet"  href="formato.css">
+    <script src="java.js" defer></script>
+</head>
+<body>
+  <header id="header" class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="home.html" onclick="selectTab(event, 'home')">Homer <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="receita.html" onclick="selectTab(event, 'menu')">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro.html" onclick="selectTab(event, 'cadastro')">Cadastro</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+</header>
 
+<div class="container">
+    <div class="logo">
+        <img src="estilo/culinaria.png" alt="Receitas da Tia Jurema">
+        <h1>Receitas. Que delicia</h1>
+    </div>
+        
+    <p id="perfume">Bem-vindo(a) ao site. Que delicia.</p>
+    <p id="perfume_bar">Conheça deliciosas receitas para o dia a dia.</p>
+</div>
+
+
+<footer id="footer" class="bg-dark text-light text-center">
+    &copy; Que Delicia 2024.
+</footer>
+
+
+
+   
+</body>
+</html>
