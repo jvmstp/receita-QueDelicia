@@ -1,25 +1,66 @@
-body{
+body {
     background-color: darksalmon;
     max-width: 100%;
-      height: auto;
+      height: 100%;
     
   }
   
   
-  @media only screen and (max-width: 600px) {
-    /* Estilos para dispositivos com largura máxima de 600px */
+  @media (max-width: 991.98px){
+
   }
 
+  
 footer {
     background-color: #302f2f;
     color: #fff;
     text-align: center;
     padding: 0.1px;
     right:0.5px ;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
+    align-items: center;
+    justify-content: center;
 }
+
+#header {
+    position: fixed; /* Tornando a barra de navegação fixa */
+    top: 0; /* Colocando-a no topo da janela */
+    width: 100%; /* Definindo a largura como 100% */
+    z-index: 1000; /* Ajustando o z-index se necessário */
+}
+#main {
+    height: calc(100vh - 100px);
+    overflow-y: auto; /* Adicionando overflow-y automático */
+}
+.container {
+    min-height: 100%;
+}
+
+.navbar {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+}
+
+nav {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.nav-item.active .nav-link {
+    background-color:transparent;
+    color: #fff;
+}
+
 
 img {
     position: relative;
@@ -41,14 +82,3 @@ p{
     font-weight: bold;
     top: -10px;
 }
-#header {
-    height: 60px;
-}
-#main {
-    height: calc(100vh - 100px);
-    overflow-y: auto; /* Adicionando overflow-y automático */
-}
-.container {
-    min-height: 100%;
-}
-
