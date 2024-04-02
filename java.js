@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 });
 
+
+
 function carregarEstados() {
     fetch('municipios/estados.csv')
         .then(response => response.text())
@@ -64,3 +66,4 @@ function atualizarCidades() {
 
 // Inicializar carregamento dos estados
 carregarEstados();
+
