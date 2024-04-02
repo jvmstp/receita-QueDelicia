@@ -7,6 +7,10 @@ body{
 
 
 @media only screen and (max-width: 600px) {
+  .container {
+    overflow: auto; /* ou scroll */
+    height: 300px; /* ajuste conforme necessário */
+}
   /* Estilos para dispositivos com largura máxima de 600px */
 }
 #header {
