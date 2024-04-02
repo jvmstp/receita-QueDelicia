@@ -1,56 +1,84 @@
-body{
+body {
   background-color: darksalmon;
-  max-width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  
 }
-
-
-@media only screen and (max-width: 600px) {
-  
-  /* Estilos para dispositivos com largura máxima de 600px */
-}
-#header {
-  position: fixed; /* Tornando a barra de navegação fixa */
-  top: 0; /* Colocando-a no topo da janela */
-  width: 100%; /* Definindo a largura como 100% */
-  z-index: 1000; /* Ajustando o z-index se necessário */
-}
-#main {
-  height: calc(100vh - 100px);
-  overflow-y: auto; /* Adicionando overflow-y automático */
-}
-
-.sider_bar {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    opacity: 0.8;
-    z-index: 1000;
+@media (max-width: 992px) {
+  .recipe-container {
+    flex-direction: column;
   }
-  
 
-.sider_bar a{
-  color: #fff;
-  text-decoration: none;
-  margin: 0 10px;
+div .recipe1 {
+    width: 100%;
+    margin: 10px;
+  }
+div .recipe2{
+  width: 100%;
+  margin: 10px;
+}
 
+div .recipe3{
+  width: 100%;
+  margin: 10px;
 }
-.sider_bar nav a:hover {
-  text-decoration: underline;
+
+
+#main {
+    height: calc(100vh - 100px);
+    overflow-y: auto; /* Adicionando overflow-y automático */
 }
+.container {
+    min-height: 100%;
+}
+
+.recipe-container {
+    padding-top: 0px; /* Remover o padding-top em telas maiores */
+    margin-top: 80px; /* Adicionar margem superior à .recipe-container */
+  }
+  #header {
+    position: fixed; /* Tornando a barra de navegação fixa */
+    top: 0px; /* Colocando-a no topo da janela */
+    width: 100%; /* Definindo a largura como 100% */
+    z-index: 1000; /* Ajustando o z-index se necessário */
+  }
+}
+
+
 
 
 .recipe-container {
-    font-size: 0; /* Remove espaçamento entre elementos inline */
-  }
 
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.recipe1, .recipe2, .recipe3 {
+  width: 30%;
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.recipe1 img, .recipe2 img, .recipe3 img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.espaco, .espaco1 {
+  margin-top: 10px;
+}
+
+.recipe1 h2, .recipe2 h2, .recipe3 h2 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.recipe1 p, .recipe2 p, .recipe3 p {
+  color: #666;
+  font-size: 16px;
+}
 
 footer {
   background-color: #302f2f;
@@ -62,161 +90,11 @@ footer {
   bottom: 0;
   width: 100%;
 }
-
-.footer-info {
-    font-family: "DN Sans",sans-serif;
-    font-size: 25px;
-}
-
-.corner-link{
-    position: relative;
-    color: #000;
-    font-size: 20px;
-    bottom: 10px;
-    right: 2px;
-}
-
 .nav-item.active .nav-link {
-  background-color: transparent;
-  color: #fff;
+background-color:transparent;
+color: #fff;
 }
 
 .navbar{
-  z-index: 999;
+z-index: 999;
 }
-
-#main {
-  height: calc(100vh - 100px);
-  overflow-y: auto; /* Adicionando overflow-y automático */
-}
-
-.sider_bar {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    opacity: 0.8;
-    z-index: 1000;
-  }
-  
-
-.sider_bar a{
-  color: #fff;
-  text-decoration: none;
-  margin: 0 10px;
-
-}
-.sider_bar nav a:hover {
-  text-decoration: underline;
-}
-
-
-.recipe-container {
-    font-size: 0; /* Remove espaçamento entre elementos inline */
-  }
-
-.recipe1 {
-    position:relative;
-    background-color: #f5eaaf;
-    width: calc(25% - 2px); /* Calculamos 33.33% menos 4px para ajustar o espaçamento */
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 125px; /* Espaçamento entre as caixas */
-    border: 2px solid #ccc;
-    top: 30px;
-    box-sizing: border-box;
-    font-size: initial; /* Restaura o tamanho da fonte para o conteúdo da caixa */
-    padding: 30px;
-  }
-  .recipe2 {
-    position:relative;
-    background-color: #f5eaaf;
-    width: calc(25% - 2px); /* Calculamos 33.33% menos 4px para ajustar o espaçamento */
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 125px; /* Espaçamento entre as caixas */
-    border: 2px solid #ccc;
-    top: 30px;
-    box-sizing: border-box;
-    font-size: initial; /* Restaura o tamanho da fonte para o conteúdo da caixa */
-    padding: 30px;
-  }
-  .recipe3 {
-    position:relative;
-    background-color: #f5eaaf;
-    width: calc(25% - 2px); /* Calculamos 33.33% menos 4px para ajustar o espaçamento */
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 5px; /* Espaçamento entre as caixas */
-    border: 2px solid #ccc;
-    top: 30px;
-    box-sizing: border-box;
-    font-size: initial; /* Restaura o tamanho da fonte para o conteúdo da caixa */
-    padding: 30px;
-  }
-.corner-link {
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    color: #131212;
-    font-family: "Dm Sans",  sans-serif;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-  }
-.recipe1 img {
-  position: relative;
-    max-width: 100%;
-    left: 0px;
-    height: auto;
-    display: block;
-    margin-bottom: 30px;
-  }
-
-
-.recipe2 img {
-    position: relative;
-      max-width: 100%;
-      left: 0px;
-      top: 30px;
-      height: auto;
-      display: block;
-      margin-bottom: 30px;
-  }
-
-
-.recipe3 img {
-  position: relative;
-    max-width: 100%;
-    left: 0px;
-    top: 30px;
-    height: auto;
-    display: block;
-    margin-bottom: 10px;
-}
-
-  
-footer {
-    background-color: #302f2f;
-    color: #fff;
-    text-align: center;
-    padding: 0.1px;
-    right:0.5px ;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-
-
-.corner-link{
-    position: relative;
-    color: #000;
-    font-size: 20px;
-    bottom: 10px;
-    right: 2px;
-}
-
