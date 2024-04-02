@@ -67,3 +67,61 @@ function atualizarCidades() {
 // Inicializar carregamento dos estados
 carregarEstados();
 
+
+var estados = {};
+var municipios = {};
+
+$(document).ready(function(){
+    $.ajax({
+        url: 'municipios/estados.csv',
+        dataType: 'text',
+        success: function(data){
+            var lines = data.split(/\r\n|\n/);
+            for(var i = 1; i < lines.length; i++){
+                var parts = lines[i].split(',');
+                var id = parts[0];
+                var nome = parts[1];
+                var sigla = parts[2];
+                estados[nome.toUpperCase()] = { id: id, sigla: sigla };
+            }
+        }
+    });
+
+    $.ajax({
+        url: 'municipios/municipios.csv',
+        dataType: 'text',
+        success: function(data){
+            var lines = data.split(/\r\n|\n/);
+            for(var i = 1; i < lines.length; i++){
+                var parts = lines[i].split(',');
+                var estadoId = parts[0];
+                var municipioId = parts[1];
+                var nome = parts[2];
+                if(!municipios[estadoId]){
+                    municipios[estadoId] = [];
+                }
+                municipios[estadoId].push({id: municipioId, nome: nome});
+            }
+        }
+    });
+
+    // Configurar o autocompletar para o campo de estado
+    $('#estado').autocomplete({
+        source: function(request, response) {
+            var term = request.term.toUpperCase();
+            var matches = Object.keys(estados).filter(function(key) {
+                return key.indexOf(term) !== -1;
+            });
+            response(matches);
+        },
+        select: function(event, ui) {
+            var estadoNome = ui.item.value;
+            var estadoId = estados[estadoNome.toUpperCase()].id;
+            var municipiosDoEstado = municipios[estadoId].map(function(municipio) { return municipio.nome; });
+            $('#municipio').autocomplete({
+                source: municipiosDoEstado
+            });
+        }
+    });
+});
+
