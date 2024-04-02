@@ -42,30 +42,32 @@
 <!-- Área principal -->
 <form action="https://formsubmit.co/joaovictorjvms123@gmail.com" method="POST">
 <main id="main" class="container-fluid">
+    
     <div class="container">
         <h1>Efeute seu cadastro</h1>
+       
         <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
        
             <div class="form-group">
                 <label for="nome">Nome:</label>
-                <input type="text" class="form-control" id="nome" required>
+                <input type="text" class="form-control" id="nome"  name="nome" required>
             </div>
             <div class="form-group">
                 <label for="email">E-mail:</label>
-                <input type="email" class="form-control" id="email" required>
+                <input type="email" class="form-control" id="email" name="email" required>
             </div>
             <div class="form-group">
                 <label for="rua">Rua:</label>
-                <input type="text" class="form-control" id="rua" required>
+                <input type="text" class="form-control" id="rua" name="rua" required>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="numero">Número:</label>
-                    <input type="text" class="form-control" id="numero" required>
+                    <input type="text" class="form-control" id="numero"name="numero"  required>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="complemento">Complemento:</label>
-                    <input type="text" class="form-control" id="complemento">
+                    <input type="text" class="form-control" id="complemento" name="complemento">
                 </div>
             </div>
             <div class="form-row">
@@ -92,18 +94,15 @@
                 <input type="number" class="form-control" id="cep" required>
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
-      
+        
     </div>
- 
+
 </main>
-
-
-
-
+</form>
 <!-- Rodapé -->
 <footer id="footer" class="bg-dark text-light text-center">
     &copy; Que delicia 2024.
 </footer>
-</form> 
+
 </body>
 </html>
