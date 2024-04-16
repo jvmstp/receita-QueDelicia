@@ -23,22 +23,22 @@ div .recipe3{
 
 #main {
     height: calc(100vh - 100px);
-    overflow-y: auto; /* Adicionando overflow-y automático */
+    overflow-y: auto; 
 }
 .container {
     min-height: 100%;
 }
 
 .recipe-container {
-    padding-top: 0px; /* Remover o padding-top em telas maiores */
-    margin-top: 80px; /* Adicionar margem superior à .recipe-container */
+    padding-top: 0px; 
+    margin-top: 80px; 
     margin-right: 20px;
   }
   #header {
-    position: fixed; /* Tornando a barra de navegação fixa */
-    top: 0px; /* Colocando-a no topo da janela */
-    width: 100%; /* Definindo a largura como 100% */
-    z-index: 1000; /* Ajustando o z-index se necessário */
+    position: fixed; 
+    top: 0px; 
+    width: 100%; 
+    z-index: 1000; 
   }
 }
 
